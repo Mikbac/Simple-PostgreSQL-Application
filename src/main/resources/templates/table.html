@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+<form class="home">
+
+
+    <table>
+        <thead>
+        <tr>
+            <th> Id</th>
+            <th> Kolumna1</th>
+            <th> Kolumna2</th>
+            <th> Kolumna3</th>
+            <th> Kolumna4</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="exampleTable : ${tables}">
+            <td><span th:text="${exampleTable.id}"> id </span></td>
+            <td><span th:text="${exampleTable.kolumna1}"> kolumna1 </span></td>
+            <td><span th:text="${exampleTable.kolumna2}"> Kolumna2 </span></td>
+            <td><span th:text="${exampleTable.kolumna3}"> Kolumna3 </span></td>
+            <td><span th:text="${exampleTable.kolumna4}"> Kolumna4 </span></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <br/><br/><br/>
+
+    <div class="controls">
+        <select id="select01">
+            <option value="Kolumna1">Kolumna1</option>
+            <option value="Kolumna2">Kolumna2</option>
+            <option value="Kolumna3">Kolumna3</option>
+            <option value="Kolumna4">Kolumna4</option>
+        </select>
+    </div>
+    <br/><br/><br/>
+
+    <!-- Kolumna1 -->
+    <div class="myClass" id="Kolumna1">
+        <h3>Unikalne wiersze dla kolumny 1</h3>
+        <table>
+            <thead>
+            <tr>
+                <th> Id</th>
+                <th> Kolumna1</th>
+                <th> Kolumna2</th>
+                <th> Kolumna3</th>
+                <th> Kolumna4</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="exampleTable : ${uniqueTable1}">
+                <td><span th:text="${exampleTable.id}"> id </span></td>
+                <td><span th:text="${exampleTable.kolumna1}"> kolumna1 </span></td>
+                <td><span th:text="${exampleTable.kolumna2}"> Kolumna2 </span></td>
+                <td><span th:text="${exampleTable.kolumna3}"> Kolumna3 </span></td>
+                <td><span th:text="${exampleTable.kolumna4}"> Kolumna4 </span></td>
+            </tr>
+            </tbody>
+        </table>
+        <br/>
+        <h3>Powtarzajace się krotki dla kolumny 1</h3>
+        <table>
+            <thead>
+            <tr>
+                <th> Id</th>
+                <th> Kolumna1</th>
+                <th> Kolumna2</th>
+                <th> Kolumna3</th>
+                <th> Kolumna4</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="exampleTable : ${repeatedTable1}">
+                <td><span th:text="${exampleTable.id}"> id </span></td>
+                <td><span th:text="${exampleTable.kolumna1}"> kolumna1 </span></td>
+                <td><span th:text="${exampleTable.kolumna2}"> Kolumna2 </span></td>
+                <td><span th:text="${exampleTable.kolumna3}"> Kolumna3 </span></td>
+                <td><span th:text="${exampleTable.kolumna4}"> Kolumna4 </span></td>
+            </tr>
+            </tbody>
+        </table>
+        <br/>
+    </div>
+
+    <!-- Kolumna2 -->
+    <div class="myClass" id="Kolumna2">
+        <h3>Unikalne wiersze dla kolumny 2</h3>
+        <table>
+            <thead>
+            <tr>
+                <th> Id</th>
+                <th> Kolumna1</th>
+                <th> Kolumna2</th>
+                <th> Kolumna3</th>
+                <th> Kolumna4</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="exampleTable : ${uniqueTable2}">
+                <td><span th:text="${exampleTable.id}"> id </span></td>
+                <td><span th:text="${exampleTable.kolumna1}"> kolumna1 </span></td>
+                <td><span th:text="${exampleTable.kolumna2}"> Kolumna2 </span></td>
+                <td><span th:text="${exampleTable.kolumna3}"> Kolumna3 </span></td>
+                <td><span th:text="${exampleTable.kolumna4}"> Kolumna4 </span></td>
+            </tr>
+            </tbody>
+        </table>
+        <br/>
+        <h3>Powtarzajace się krotki dla kolumny 2</h3>
+        <table>
+            <thead>
+            <tr>
+                <th> Id</th>
+                <th> Kolumna1</th>
+                <th> Kolumna2</th>
+                <th> Kolumna3</th>
+                <th> Kolumna4</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="exampleTable : ${repeatedTable2}">
+                <td><span th:text="${exampleTable.id}"> id </span></td>
+                <td><span th:text="${exampleTable.kolumna1}"> kolumna1 </span></td>
+                <td><span th:text="${exampleTable.kolumna2}"> Kolumna2 </span></td>
+                <td><span th:text="${exampleTable.kolumna3}"> Kolumna3 </span></td>
+                <td><span th:text="${exampleTable.kolumna4}"> Kolumna4 </span></td>
+            </tr>
+            </tbody>
+        </table>
+        <br/>
+    </div>
+
+    <!-- Kolumna3 -->
+    <div class="myClass" id="Kolumna3">
+        <h3>Unikalne wiersze dla kolumny 3</h3>
+        <table>
+            <thead>
+            <tr>
+                <th> Id</th>
+                <th> Kolumna1</th>
+                <th> Kolumna2</th>
+                <th> Kolumna3</th>
+                <th> Kolumna4</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="exampleTable : ${uniqueTable3}">
+                <td><span th:text="${exampleTable.id}"> id </span></td>
+                <td><span th:text="${exampleTable.kolumna1}"> kolumna1 </span></td>
+                <td><span th:text="${exampleTable.kolumna2}"> Kolumna2 </span></td>
+                <td><span th:text="${exampleTable.kolumna3}"> Kolumna3 </span></td>
+                <td><span th:text="${exampleTable.kolumna4}"> Kolumna4 </span></td>
+            </tr>
+            </tbody>
+        </table>
+        <br/>
+        <h3>Powtarzajace się krotki dla kolumny 3</h3>
+        <table>
+            <thead>
+            <tr>
+                <th> Id</th>
+                <th> Kolumna1</th>
+                <th> Kolumna2</th>
+                <th> Kolumna3</th>
+                <th> Kolumna4</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="exampleTable : ${repeatedTable3}">
+                <td><span th:text="${exampleTable.id}"> id </span></td>
+                <td><span th:text="${exampleTable.kolumna1}"> kolumna1 </span></td>
+                <td><span th:text="${exampleTable.kolumna2}"> Kolumna2 </span></td>
+                <td><span th:text="${exampleTable.kolumna3}"> Kolumna3 </span></td>
+                <td><span th:text="${exampleTable.kolumna4}"> Kolumna4 </span></td>
+            </tr>
+            </tbody>
+        </table>
+        <br/>
+    </div>
+
+    <!-- Kolumna4 -->
+    <div class="myClass" id="Kolumna4">
+        <h3>Unikalne wiersze dla kolumny 4</h3>
+        <table>
+            <thead>
+            <tr>
+                <th> Id</th>
+                <th> Kolumna1</th>
+                <th> Kolumna2</th>
+                <th> Kolumna3</th>
+                <th> Kolumna4</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="exampleTable : ${uniqueTable4}">
+                <td><span th:text="${exampleTable.id}"> id </span></td>
+                <td><span th:text="${exampleTable.kolumna1}"> kolumna1 </span></td>
+                <td><span th:text="${exampleTable.kolumna2}"> Kolumna2 </span></td>
+                <td><span th:text="${exampleTable.kolumna3}"> Kolumna3 </span></td>
+                <td><span th:text="${exampleTable.kolumna4}"> Kolumna4 </span></td>
+            </tr>
+            </tbody>
+        </table>
+        <br/>
+        <h3>Powtarzajace się krotki dla kolumny 4</h3>
+        <table>
+            <thead>
+            <tr>
+                <th> Id</th>
+                <th> Kolumna1</th>
+                <th> Kolumna2</th>
+                <th> Kolumna3</th>
+                <th> Kolumna4</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="exampleTable : ${repeatedTable4}">
+                <td><span th:text="${exampleTable.id}"> id </span></td>
+                <td><span th:text="${exampleTable.kolumna1}"> kolumna1 </span></td>
+                <td><span th:text="${exampleTable.kolumna2}"> Kolumna2 </span></td>
+                <td><span th:text="${exampleTable.kolumna3}"> Kolumna3 </span></td>
+                <td><span th:text="${exampleTable.kolumna4}"> Kolumna4 </span></td>
+            </tr>
+            </tbody>
+        </table>
+        <br/>
+    </div>
+
+
+</form>
+
+
+<link rel="stylesheet" type="text/css" th:href="@{/css/home.css}"/>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</html>
+
+
+<script type="text/javascript">
+    $(function () {
+        $("#Kolumna1").show();
+
+        $("#select01").on("change", function () {
+            $("#Kolumna1").hide();
+            $(".myClass").hide();
+            $("div[id='" + $(this).val() + "']").show();
+        });
+    });
+</script>
+
+
+

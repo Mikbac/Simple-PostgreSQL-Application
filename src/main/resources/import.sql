@@ -1,0 +1,10 @@
+insert into tabela_testowa VALUES ('1','wartoœæ1','wartoœæ2','wartoœæ3','1');
+insert into tabela_testowa VALUES ('2','waroœæ21','wartoœæ22','wartoœæ23','5');
+insert into tabela_testowa VALUES ('3','wartoœæ31','wartoœæ22','wartoœæ32','6');
+insert into tabela_testowa VALUES ('4','wartoœæ54','wartoœæ43','wartoœæ45','4');
+insert into tabela_testowa VALUES ('5','wartoœæ43','wartoœæ23','wartoœæ34','4');
+insert into tabela_testowa VALUES ('6','wartoœæ43','wartoœæ54','wartoœæ43','2');
+insert into tabela_testowa VALUES ('7','wartoœæ54','wartoœæ52','wartoœæ53','8');
+insert into tabela_testowa VALUES ('8','wartoœæ21','wartoœæ2211','wartoœæ43','4');
+insert into tabela_testowa VALUES ('9','wartoœæ43','wartoœæ33','wartoœæ45','9');
+insert into tabela_testowa VALUES ('10','wartoœæ87','wartoœæ62','wartoœæ11','3');
