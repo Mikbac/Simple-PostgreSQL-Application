@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/Mikbac/Suncode-task.svg?branch=master)](https://travis-ci.org/Mikbac/Suncode-task)
-
 # Suncode
 
 ## Table of contents
