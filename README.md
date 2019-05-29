@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Mikbac/Suncode-task.svg?branch=master)](https://travis-ci.org/Mikbac/Suncode-task)
+
 # Suncode
 
 ## Table of contents
@@ -36,7 +38,7 @@ http://localhost:8080/swagger-ui.html#/
 |---|---|---|---|
 |```GET /tables ```|Get all tables.|---|```GET /tables ```|
 |```GET /tables/uniqueTable/{column} ```|Get tables with the same column.|```{column}``` - column name|```GET /tables/uniqueTable/kolumna1```|
-|```GET /tables/repeatedTable/{column} ```|Get tables with unique column.|```{column}``` - column name|```GET /tables/repeatedTable/kolumna1```|
+|```GET /tables/repeatedTable/{column} ```|Get tables with the unique column.|```{column}``` - column name|```GET /tables/repeatedTable/kolumna1```|
 
 ### Technologies
 
