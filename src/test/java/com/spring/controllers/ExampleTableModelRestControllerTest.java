@@ -1,7 +1,7 @@
-package com.controllers;
+package com.spring.controllers;
 
-import com.models.ExampleTable;
-import com.services.ExampleTableService;
+import com.model.ExampleTableModel;
+import com.spring.services.ExampleTableService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -26,7 +26,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
-public class ExampleTableRestControllerTest {
+public class ExampleTableModelRestControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -34,15 +34,15 @@ public class ExampleTableRestControllerTest {
     @MockBean
     private ExampleTableService exampleTableService;
 
-    private ExampleTable firstTable;
-    private ExampleTable secondTable;
-    private ExampleTable thirdTable;
+    private ExampleTableModel firstTable;
+    private ExampleTableModel secondTable;
+    private ExampleTableModel thirdTable;
 
     @Before
     public void init() {
-        firstTable = new ExampleTable((long) 1, "w1", "w1", "w1", (long) 1);
-        secondTable = new ExampleTable((long) 1, "w2", "w2", "w2", (long) 1);
-        thirdTable = new ExampleTable((long) 1, "w1", "w3", "w3", (long) 1);
+        firstTable = new ExampleTableModel((long) 1, "w1", "w1", "w1", (long) 1);
+        secondTable = new ExampleTableModel((long) 1, "w2", "w2", "w2", (long) 1);
+        thirdTable = new ExampleTableModel((long) 1, "w1", "w3", "w3", (long) 1);
     }
 
 
