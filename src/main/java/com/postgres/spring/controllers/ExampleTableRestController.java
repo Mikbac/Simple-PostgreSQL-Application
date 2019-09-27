@@ -3,7 +3,6 @@ package com.postgres.spring.controllers;
 import com.postgres.constants.WebConstants.Mapping;
 import com.postgres.model.ExampleTableModel;
 import com.postgres.spring.services.ExampleTableService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -22,12 +22,8 @@ import java.util.List;
 @RequestMapping(Mapping.TABLES)
 public class ExampleTableRestController {
 
+    @Resource
     private ExampleTableService exampleTableService;
-
-    @Autowired
-    public ExampleTableRestController(ExampleTableService exampleTableService) {
-        this.exampleTableService = exampleTableService;
-    }
 
     @GetMapping(value = "", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<ExampleTableModel> getAllTables() {

@@ -1,4 +1,4 @@
-# Suncode
+# Simple PostgresSQL Application
 
 ## Table of contents
 * [API Endpoints](#api-endpoints)

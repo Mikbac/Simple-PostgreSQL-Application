@@ -3,9 +3,9 @@ package com.postgres.spring.services.impl;
 import com.postgres.model.ExampleTableModel;
 import com.postgres.spring.repositories.ExampleTableRepository;
 import com.postgres.spring.services.ExampleTableService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.math.BigInteger;
 import java.util.List;
 
@@ -16,12 +16,8 @@ import java.util.List;
 @Service
 public class ExampleTableServiceImpl implements ExampleTableService {
 
-    ExampleTableRepository exampleTableRepository;
-
-    @Autowired
-    public ExampleTableServiceImpl(ExampleTableRepository exampleTableRepository) {
-        this.exampleTableRepository = exampleTableRepository;
-    }
+    @Resource
+    private ExampleTableRepository exampleTableRepository;
 
     @Override
     public void save(ExampleTableModel exampleTableModel) {
