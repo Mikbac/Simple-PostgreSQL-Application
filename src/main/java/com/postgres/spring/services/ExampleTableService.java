@@ -1,6 +1,6 @@
-package com.spring.services;
+package com.postgres.spring.services;
 
-import com.model.ExampleTableModel;
+import com.postgres.model.ExampleTableModel;
 
 import java.math.BigInteger;
 import java.util.List;

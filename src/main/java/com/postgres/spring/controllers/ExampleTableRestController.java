@@ -1,7 +1,8 @@
-package com.spring.controllers;
+package com.postgres.spring.controllers;
 
-import com.model.ExampleTableModel;
-import com.spring.services.ExampleTableService;
+import com.postgres.constants.WebConstants.Mapping;
+import com.postgres.model.ExampleTableModel;
+import com.postgres.spring.services.ExampleTableService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -18,7 +19,7 @@ import java.util.List;
 
 @CrossOrigin
 @RestController
-@RequestMapping("/tables")
+@RequestMapping(Mapping.TABLES)
 public class ExampleTableRestController {
 
     private ExampleTableService exampleTableService;
@@ -33,12 +34,12 @@ public class ExampleTableRestController {
         return exampleTableService.findAll();
     }
 
-    @GetMapping(value = "/uniqueTable/{column}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = Mapping.UNIQUE_TABLE, produces = MediaType.APPLICATION_JSON_VALUE)
     public List<ExampleTableModel> getUniqueTables(@PathVariable String column) {
         return exampleTableService.getUniqueTables(column);
     }
 
-    @GetMapping(value = "/repeatedTable/{column}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = Mapping.REPEATED_TABLE, produces = MediaType.APPLICATION_JSON_VALUE)
     public List<ExampleTableModel> getRepeatedTables(@PathVariable String column) {
         return exampleTableService.getRepeatedTables(column);
     }

@@ -1,7 +1,7 @@
-package com.spring.controllers;
+package com.postgres.spring.controllers;
 
-import com.model.ExampleTableModel;
-import com.spring.services.ExampleTableService;
+import com.postgres.model.ExampleTableModel;
+import com.postgres.spring.services.ExampleTableService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -53,22 +53,22 @@ public class ExampleTableModelRestControllerTest {
                 .andExpect(jsonPath("$", hasSize(3)))
 
                 .andExpect(jsonPath("$[0].id", is(Math.toIntExact(firstTable.getId()))))
-                .andExpect(jsonPath("$[0].kolumna1", is(firstTable.getKolumna1())))
-                .andExpect(jsonPath("$[0].kolumna2", is(firstTable.getKolumna2())))
-                .andExpect(jsonPath("$[0].kolumna3", is(firstTable.getKolumna3())))
-                .andExpect(jsonPath("$[0].kolumna4", is(Math.toIntExact(firstTable.getKolumna4()))))
+                .andExpect(jsonPath("$[0].column1", is(firstTable.getColumn1())))
+                .andExpect(jsonPath("$[0].column2", is(firstTable.getColumn2())))
+                .andExpect(jsonPath("$[0].column3", is(firstTable.getColumn3())))
+                .andExpect(jsonPath("$[0].column4", is(Math.toIntExact(firstTable.getColumn4()))))
 
                 .andExpect(jsonPath("$[1].id", is(Math.toIntExact(secondTable.getId()))))
-                .andExpect(jsonPath("$[1].kolumna1", is(secondTable.getKolumna1())))
-                .andExpect(jsonPath("$[1].kolumna2", is(secondTable.getKolumna2())))
-                .andExpect(jsonPath("$[1].kolumna3", is(secondTable.getKolumna3())))
-                .andExpect(jsonPath("$[1].kolumna4", is(Math.toIntExact(secondTable.getKolumna4()))))
+                .andExpect(jsonPath("$[1].column1", is(secondTable.getColumn1())))
+                .andExpect(jsonPath("$[1].column2", is(secondTable.getColumn2())))
+                .andExpect(jsonPath("$[1].column3", is(secondTable.getColumn3())))
+                .andExpect(jsonPath("$[1].column4", is(Math.toIntExact(secondTable.getColumn4()))))
 
                 .andExpect(jsonPath("$[2].id", is(Math.toIntExact(thirdTable.getId()))))
-                .andExpect(jsonPath("$[2].kolumna1", is(thirdTable.getKolumna1())))
-                .andExpect(jsonPath("$[2].kolumna2", is(thirdTable.getKolumna2())))
-                .andExpect(jsonPath("$[2].kolumna3", is(thirdTable.getKolumna3())))
-                .andExpect(jsonPath("$[2].kolumna4", is(Math.toIntExact(thirdTable.getKolumna4()))))
+                .andExpect(jsonPath("$[2].column1", is(thirdTable.getColumn1())))
+                .andExpect(jsonPath("$[2].column2", is(thirdTable.getColumn2())))
+                .andExpect(jsonPath("$[2].column3", is(thirdTable.getColumn3())))
+                .andExpect(jsonPath("$[2].column4", is(Math.toIntExact(thirdTable.getColumn4()))))
 
                 .andExpect(status().isOk());
 
@@ -76,15 +76,15 @@ public class ExampleTableModelRestControllerTest {
 
     @Test
     public void getUniqueTables() throws Exception {
-        when(exampleTableService.getUniqueTables("kolumna1")).thenReturn(Arrays.asList(secondTable));
-        this.mockMvc.perform(get("/tables/uniqueTable/kolumna1").contentType(APPLICATION_JSON_VALUE))
+        when(exampleTableService.getUniqueTables("column1")).thenReturn(Arrays.asList(secondTable));
+        this.mockMvc.perform(get("/tables/uniqueTable/column1").contentType(APPLICATION_JSON_VALUE))
                 .andExpect(jsonPath("$", hasSize(1)))
 
                 .andExpect(jsonPath("$[0].id", is(Math.toIntExact(secondTable.getId()))))
-                .andExpect(jsonPath("$[0].kolumna1", is(secondTable.getKolumna1())))
-                .andExpect(jsonPath("$[0].kolumna2", is(secondTable.getKolumna2())))
-                .andExpect(jsonPath("$[0].kolumna3", is(secondTable.getKolumna3())))
-                .andExpect(jsonPath("$[0].kolumna4", is(Math.toIntExact(secondTable.getKolumna4()))))
+                .andExpect(jsonPath("$[0].column1", is(secondTable.getColumn1())))
+                .andExpect(jsonPath("$[0].column2", is(secondTable.getColumn2())))
+                .andExpect(jsonPath("$[0].column3", is(secondTable.getColumn3())))
+                .andExpect(jsonPath("$[0].column4", is(Math.toIntExact(secondTable.getColumn4()))))
 
 
                 .andExpect(status().isOk());
@@ -93,21 +93,21 @@ public class ExampleTableModelRestControllerTest {
 
     @Test
     public void getRepeatedTables() throws Exception {
-        when(exampleTableService.getRepeatedTables("kolumna1")).thenReturn(Arrays.asList(firstTable, thirdTable));
-        this.mockMvc.perform(get("/tables/repeatedTable/kolumna1").contentType(APPLICATION_JSON_VALUE))
+        when(exampleTableService.getRepeatedTables("column1")).thenReturn(Arrays.asList(firstTable, thirdTable));
+        this.mockMvc.perform(get("/tables/repeatedTable/column1").contentType(APPLICATION_JSON_VALUE))
                 .andExpect(jsonPath("$", hasSize(2)))
 
                 .andExpect(jsonPath("$[0].id", is(Math.toIntExact(firstTable.getId()))))
-                .andExpect(jsonPath("$[0].kolumna1", is(firstTable.getKolumna1())))
-                .andExpect(jsonPath("$[0].kolumna2", is(firstTable.getKolumna2())))
-                .andExpect(jsonPath("$[0].kolumna3", is(firstTable.getKolumna3())))
-                .andExpect(jsonPath("$[0].kolumna4", is(Math.toIntExact(firstTable.getKolumna4()))))
+                .andExpect(jsonPath("$[0].column1", is(firstTable.getColumn1())))
+                .andExpect(jsonPath("$[0].column2", is(firstTable.getColumn2())))
+                .andExpect(jsonPath("$[0].column3", is(firstTable.getColumn3())))
+                .andExpect(jsonPath("$[0].column4", is(Math.toIntExact(firstTable.getColumn4()))))
 
                 .andExpect(jsonPath("$[1].id", is(Math.toIntExact(thirdTable.getId()))))
-                .andExpect(jsonPath("$[1].kolumna1", is(thirdTable.getKolumna1())))
-                .andExpect(jsonPath("$[1].kolumna2", is(thirdTable.getKolumna2())))
-                .andExpect(jsonPath("$[1].kolumna3", is(thirdTable.getKolumna3())))
-                .andExpect(jsonPath("$[1].kolumna4", is(Math.toIntExact(thirdTable.getKolumna4()))))
+                .andExpect(jsonPath("$[1].column1", is(thirdTable.getColumn1())))
+                .andExpect(jsonPath("$[1].column2", is(thirdTable.getColumn2())))
+                .andExpect(jsonPath("$[1].column3", is(thirdTable.getColumn3())))
+                .andExpect(jsonPath("$[1].column4", is(Math.toIntExact(thirdTable.getColumn4()))))
 
                 .andExpect(status().isOk());
 

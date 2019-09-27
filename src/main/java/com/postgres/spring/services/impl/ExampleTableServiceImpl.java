@@ -1,7 +1,8 @@
-package com.spring.services;
+package com.postgres.spring.services.impl;
 
-import com.model.ExampleTableModel;
-import com.spring.repositories.ExampleTableRepository;
+import com.postgres.model.ExampleTableModel;
+import com.postgres.spring.repositories.ExampleTableRepository;
+import com.postgres.spring.services.ExampleTableService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -44,16 +45,16 @@ public class ExampleTableServiceImpl implements ExampleTableService {
 
     @Override
     public List<ExampleTableModel> getUniqueTables(String column) {
-        if (column.equals("kolumna1")) {
+        if (column.equals("column1")) {
             return exampleTableRepository.getUniqueTable1();
         }
-        if (column.equals("kolumna2")) {
+        if (column.equals("column2")) {
             return exampleTableRepository.getUniqueTable2();
         }
-        if (column.equals("kolumna3")) {
+        if (column.equals("column3")) {
             return exampleTableRepository.getUniqueTable3();
         }
-        if (column.equals("kolumna4")) {
+        if (column.equals("column4")) {
             return exampleTableRepository.getUniqueTable4();
         }
         return null;
@@ -61,16 +62,16 @@ public class ExampleTableServiceImpl implements ExampleTableService {
 
     @Override
     public List<ExampleTableModel> getRepeatedTables(String column) {
-        if (column.equals("kolumna1")) {
+        if (column.equals("column1")) {
             return exampleTableRepository.getRepeatedTable1();
         }
-        if (column.equals("kolumna2")) {
+        if (column.equals("column2")) {
             return exampleTableRepository.getRepeatedTable2();
         }
-        if (column.equals("kolumna3")) {
+        if (column.equals("column3")) {
             return exampleTableRepository.getRepeatedTable3();
         }
-        if (column.equals("kolumna4")) {
+        if (column.equals("column4")) {
             return exampleTableRepository.getRepeatedTable4();
         }
         return null;

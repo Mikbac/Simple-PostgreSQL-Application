@@ -2,7 +2,7 @@
 -- Created by MikBac on 29.05.2019
 -->
 <!DOCTYPE html>
-<html xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
 <form class="home">
     <table>
         <thead>
@@ -227,18 +227,9 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script th:src="@{/js/script.js}"></script>
 </html>
-<script type="text/javascript">
-    $(function () {
-        $("#Kolumna1").show();
 
-        $("#select01").on("change", function () {
-            $("#Kolumna1").hide();
-            $(".myClass").hide();
-            $("div[id='" + $(this).val() + "']").show();
-        });
-    });
-</script>
 
 
 

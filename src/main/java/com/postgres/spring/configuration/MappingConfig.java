@@ -1,4 +1,4 @@
-package com.spring.configuration;
+package com.postgres.spring.configuration;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;

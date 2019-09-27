@@ -1,6 +1,6 @@
-package com.spring.repositories;
+package com.postgres.spring.repositories;
 
-import com.model.ExampleTableModel;
+import com.postgres.model.ExampleTableModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
