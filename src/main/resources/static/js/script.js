@@ -1,6 +1,6 @@
 /**
-* -- Created by MikBac on 27.09.2019
-*/
+ * -- Created by MikBac on 27.09.2019
+ */
 
 $(function () {
     $("#Kolumna1").show();

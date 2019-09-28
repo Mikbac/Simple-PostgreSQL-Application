@@ -22,7 +22,6 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -44,7 +43,6 @@ public class ExampleTableModelRestControllerTest {
         secondTable = new ExampleTableModel((long) 1, "w2", "w2", "w2", (long) 1);
         thirdTable = new ExampleTableModel((long) 1, "w1", "w3", "w3", (long) 1);
     }
-
 
     @Test
     public void getAllTablesTest() throws Exception {
@@ -85,7 +83,6 @@ public class ExampleTableModelRestControllerTest {
                 .andExpect(jsonPath("$[0].column2", is(secondTable.getColumn2())))
                 .andExpect(jsonPath("$[0].column3", is(secondTable.getColumn3())))
                 .andExpect(jsonPath("$[0].column4", is(Math.toIntExact(secondTable.getColumn4()))))
-
 
                 .andExpect(status().isOk());
 

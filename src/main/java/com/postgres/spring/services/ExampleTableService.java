@@ -2,7 +2,6 @@ package com.postgres.spring.services;
 
 import com.postgres.model.ExampleTableModel;
 
-import java.math.BigInteger;
 import java.util.List;
 
 /**
@@ -16,8 +15,6 @@ public interface ExampleTableService {
     void saveAll(List<ExampleTableModel> exampleTableModelList);
 
     List<ExampleTableModel> findAll();
-
-    ExampleTableModel findTopById(BigInteger id);
 
     List<ExampleTableModel> getUniqueTables(String column);
 

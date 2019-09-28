@@ -6,7 +6,6 @@ import com.postgres.spring.services.ExampleTableService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.math.BigInteger;
 import java.util.List;
 
 /**
@@ -32,11 +31,6 @@ public class ExampleTableServiceImpl implements ExampleTableService {
     @Override
     public List<ExampleTableModel> findAll() {
         return exampleTableRepository.findAll();
-    }
-
-    @Override
-    public ExampleTableModel findTopById(BigInteger id) {
-        return exampleTableRepository.findTopById(id);
     }
 
     @Override
