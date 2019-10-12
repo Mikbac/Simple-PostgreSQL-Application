@@ -1,7 +1,7 @@
-package com.postgres.spring.controllers;
+package com.postgres.spring.controller;
 
 import com.postgres.model.ExampleTableModel;
-import com.postgres.spring.services.ExampleTableService;
+import com.postgres.spring.service.ExampleTableService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

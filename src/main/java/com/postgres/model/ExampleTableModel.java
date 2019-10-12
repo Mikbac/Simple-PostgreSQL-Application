@@ -1,6 +1,6 @@
 package com.postgres.model;
 
-import com.postgres.constants.EntityConstants.ExampleTable;
+import com.postgres.constant.EntityConstants.ExampleTable;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

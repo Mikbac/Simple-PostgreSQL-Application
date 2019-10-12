@@ -1,8 +1,8 @@
-package com.postgres.spring.services.impl;
+package com.postgres.spring.service.impl;
 
 import com.postgres.model.ExampleTableModel;
-import com.postgres.spring.repositories.ExampleTableRepository;
-import com.postgres.spring.services.ExampleTableService;
+import com.postgres.spring.repositorie.ExampleTableRepository;
+import com.postgres.spring.service.ExampleTableService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -34,7 +34,7 @@ public class ExampleTableServiceImpl implements ExampleTableService {
     }
 
     @Override
-    public List<ExampleTableModel> getUniqueTables(String column) {
+    public List<ExampleTableModel> getUniqueTables(final String column) {
         if (column.equals("column1")) {
             return exampleTableRepository.getUniqueTable1();
         }
@@ -51,7 +51,7 @@ public class ExampleTableServiceImpl implements ExampleTableService {
     }
 
     @Override
-    public List<ExampleTableModel> getRepeatedTables(String column) {
+    public List<ExampleTableModel> getRepeatedTables(final String column) {
         if (column.equals("column1")) {
             return exampleTableRepository.getRepeatedTable1();
         }

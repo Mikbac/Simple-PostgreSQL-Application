@@ -1,4 +1,4 @@
-package com.postgres.constants;
+package com.postgres.constant;
 
 /**
  * Created by MikBac on 27.09.2019

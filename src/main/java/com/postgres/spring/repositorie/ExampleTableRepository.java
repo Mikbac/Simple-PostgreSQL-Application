@@ -1,4 +1,4 @@
-package com.postgres.spring.repositories;
+package com.postgres.spring.repositorie;
 
 import com.postgres.model.ExampleTableModel;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -16,8 +16,6 @@ import java.util.List;
 public interface ExampleTableRepository extends JpaRepository<ExampleTableModel, BigInteger> {
 
     List<ExampleTableModel> findAll();
-
-    ExampleTableModel findTopById(BigInteger id);
 
     @Query(nativeQuery = true, value = "SELECT * FROM tabela_testowa tt1  WHERE (SELECT count(*) FROM tabela_testowa tt2 WHERE tt1.kolumna1 = tt2.kolumna1) = 1")
     List<ExampleTableModel> getUniqueTable1();

@@ -1,4 +1,4 @@
-package com.postgres.spring.services;
+package com.postgres.spring.service;
 
 import com.postgres.model.ExampleTableModel;
 
@@ -16,8 +16,8 @@ public interface ExampleTableService {
 
     List<ExampleTableModel> findAll();
 
-    List<ExampleTableModel> getUniqueTables(String column);
+    List<ExampleTableModel> getUniqueTables(final String column);
 
-    List<ExampleTableModel> getRepeatedTables(String column);
+    List<ExampleTableModel> getRepeatedTables(final String column);
 
 }
