@@ -40,7 +40,7 @@ http://localhost:8080/swagger-ui.html#/
 
 ### Technologies
 
-* [JDK - 8](https://www.oracle.com/technetwork/java/index.html)
+* [JDK 8](https://www.oracle.com/technetwork/java/index.html)
 
 * [Spring Boot - 2.0.1.RELEASE](https://spring.io/projects/spring-boot) 
 
